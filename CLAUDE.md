@@ -35,3 +35,7 @@ This document contains critical information about working with all codebase. Fol
 - Avoid captive user interfaces
 - Make every programme a filter
 
+### Bash command
+
+- ONLY use `trash`, NEVER `rm`
+
