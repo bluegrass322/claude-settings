@@ -1,11 +1,53 @@
 {
-  "language": "Blitish English",
-  "enabledPlugins": {
-    "test-plugin@bluegrass-my-tools": true,
+  "language": "Easy Blitish English that even young teenagers can understand",
+  "permissions": {
+    "defaultMode": "plan",
+    "allow": [
+      "Bash(cp:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(mkdir:*)",
+      "Bash(ls:*)",
+      "Bash(mv:*)",
+      "Bash(touch:*)",
 
-    "code-review@claude-code-plugins": true,
-    "security-guidance@claude-code-plugins": true,
-    "frontend-design@claude-code-plugins": true,
-    "commit-commands@claude-code-plugins": true
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git log:*)",
+      "Bash(gh issue view:*)"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm:*)",
+      "Bash(rm -rf:*)",
+
+      "Read(id_rsa)",
+      "Read(id_ed25519)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Read(./config/credentials.json)",
+      "Read(./build)",
+
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Bash(git push main)",
+      "Bash(git push master)",
+      "Bash(git push develop)"
+    ],
+    "ask": [
+      "Bash(chmod:*)",
+      "Bash(curl:*)",
+      "Bash(trash:*)",
+      "Bash(wget:*)",
+
+      "Bash(git push:*)"
+    ]
+  },
+  "hooks": {},
+  "autoUpdatesChannel": "stable",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/scripts/statusline.py",
+    "padding": 2
   }
-}
